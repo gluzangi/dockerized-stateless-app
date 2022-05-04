@@ -1,0 +1,25 @@
+<!-- BEGIN_TF_DOCS -->
+aws_credentials_file = "~/.aws/credentials"
+aws_profile          = "sa_auto"
+aws_region           = "us-west-2"
+environment          = "production"
+repository_name      = "ceros-ski"
+service_account_key  = "~/.ssh/id_rsa.pub"
+vpc_azs = [
+  "us-west-2a",
+  "us-west-2c"
+]
+vpc_cidr                   = "172.0.0.0/16"
+vpc_enable_nat_gateway     = true
+vpc_name                   = "vpc-ceros-ski"
+vpc_one_nat_gateway_per_az = true
+vpc_public_subnets = [
+  "172.0.1.0/24",
+  "172.0.3.0/24"
+]
+vpc_single_nat_gateway = true
+vpc_tags = {
+  "Application": "ceros-ski"
+}
+<!-- END_TF_DOCS -->
+
